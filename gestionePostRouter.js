@@ -65,7 +65,7 @@ mio_router.post('/registraUtente', (richiesta, risposta) =>{
 })
 
 mio_router.post('/postLogIn', (richiesta, risposta) =>{
-	console.log("sei nella root '/postLogIn' del server web" )
+	console.log("sei nella route '/postLogIn' del server web" )
 
 	const bodyFromNome = richiesta.body.utente 
 	const bodyFromPass = richiesta.body.passwd
