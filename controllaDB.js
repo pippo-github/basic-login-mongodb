@@ -6,6 +6,9 @@ const mongo = require('mongodb').MongoClient
 let instanzaApp = express()
 
 
+const string_connessione = process.env.DB_CONNECT || "mongodb://localhost:27017";
+
+
 modulo_gestisci_db.post('/mostraDB', (richiesta, risposta) =>{
 	console.log("sei in mostraDB")
 
@@ -109,7 +112,7 @@ modulo_gestisci_db.get('*', (richiesta, risposta) =>{
 
 
 
-mongo.connect("mongodb://localhost:27017",{ useUnifiedTopology: true }, (errore, serverDB) =>{
+mongo.connect(string_connessione,{ useUnifiedTopology: true }, (errore, serverDB) =>{
 
 	if(errore)
 	 console.log("errore: " + errore.message)
