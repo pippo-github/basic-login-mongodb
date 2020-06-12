@@ -9,10 +9,10 @@ let datiSessione = ''
 instanzaApp.set('view engine','ejs')
 
 
-mio_router.get('/', (richiesta, risposta) =>{
+/* mio_router.get('/', (richiesta, risposta) =>{
 	console.log("sei nella root '/' del server web" )
 	risposta.render('controllaApp',{ datiSessione })
-})
+}) */
 
 mio_router.get('/login', (richiesta, risposta) =>{
 	console.log("sei nella root '/login' del server web" )
