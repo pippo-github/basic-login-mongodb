@@ -1,0 +1,10 @@
+[
+    {
+        utente: "giuseppe",
+        passwd: "tarallo"
+    },
+    {
+        utente: "ciccio",
+        passwd: "pasticcio"
+    }
+]

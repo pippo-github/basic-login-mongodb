@@ -1,0 +1,132 @@
+<% if( datiSessione == '' || datiSessione == 'distrutta') {%>
+	<%- include('redirect.ejs')  %>
+<% } else { %>
+
+	
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Home page</title>
+	<link href='./main.css' rel='stylesheet' type='text/css'/>
+</head>
+
+<style>
+
+.nomeUtenteConnesso{
+	color: rgba(31, 12, 49, 0.8);
+	font-weight: bold;
+}
+
+#textWelcome{
+	background: linear-gradient(90deg, orange, rgb(216, 154, 39), blue);
+
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-o-background-clip: text;
+	-ms-background-clip: text;
+
+	color: transparent;
+	font-size: 7.7em;
+	text-transform: capitalize;
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	margin: 144px auto;
+}
+
+</style>
+
+<body>
+
+ 
+
+
+	<h1>
+		Login effettuato
+	</h1>
+
+	<div id='textWelcome'>
+		Welcome
+	</div>
+
+	<p id='msgHome'>
+		Sei nella home page
+	</p>
+
+
+	<div id='mgsToUserName'>
+			<span>ciao	</span>   
+
+			<span class="nomeUtenteConnesso">
+			<%- 
+			datiSessione
+			%>
+			</span>, <a href='/distruggiSessione'>distruggi sessione</a>
+	</div>
+
+
+<div id='footerDiv'> copyright by TarG 2009 - present </div>
+
+
+</body>
+</html>
+
+<% } %>
+
+
+
+<style>
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+
+#msgHome{
+
+ padding: 7px;
+ background: rgba(24, 178, 224,.4);
+ color: white;
+ 
+
+}
+
+#mgsToUserName{
+	background: mediumaquamarine;
+	color: blue;
+	font-size: 1.8em;
+}
+
+/* #footerDiv{
+	position: absolute;
+	bottom: 0;
+	padding: 7px;
+	width: 100%;
+	border: solid green 1px;
+	color: rgb(207, 126, 19);
+	background: rgb(2, 2, 29);
+	text-align: center;
+} */
+
+#footerDiv{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: rgb(6, 6, 54);
+	color: #ddd;
+	padding: 7px;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+
+</style>

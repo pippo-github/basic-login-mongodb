@@ -1,0 +1,4 @@
+db.utenti_login.insert([{
+	nome: "giuseppe",
+	pass: "tarallo"
+}])

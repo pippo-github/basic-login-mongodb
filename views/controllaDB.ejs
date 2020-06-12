@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Controlla DB</title>
+</head>
+<body>
+	
+
+	<div id='controllaDbBox'>
+
+			<h2 style='color: rgb(5, 75, 20)'>
+				Show database document/s
+			</h2>
+
+			<form method="post" action="/mostraDB"> 
+
+					<button>Show db documents </button>
+
+			</form>
+
+			<form method="post" action="/creaDB"> 
+
+					<button>Create db document</button>
+
+			</form>
+
+
+				<div id='controllaDbBoxOutput'>
+
+					<h2>
+						DB Content
+					</h2>
+
+<pre><!-- metti qui il codice js -->
+<% if(dati.length > 0) { %> 
+<%-
+ JSON.stringify(dati, undefined, 2)
+%> 
+<% } %> 
+</pre>
+
+
+				</div>
+
+	<p id='bottom-menu' >
+		<a href='/login'>User Login</a> | <a href='/registrazione.html'>Register User</a> 
+	</p>
+
+
+
+
+	</div>
+
+
+<div id='footer'>
+ copyright by TarG 2009 - present
+</div>
+
+
+</body>
+</html>
+
+
+
+<style>
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background: linear-gradient( 270deg,darkblue 5%, lightblue 80%, green, lightgreen 15%);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+#controllaDbBox{
+ 	width: 85%;
+	/* border: solid mediumseagreen 1px; */
+	margin: 0 auto;
+	height: 350px;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -65%)
+}
+
+#controllaDbBox h2{
+	text-align: center;
+	color: rgb(90, 9, 83);
+
+}
+
+
+
+
+#controllaDbBox button{
+	width: 100%;
+	margin: 11px 0 0 0;
+}
+
+
+#controllaDbBoxOutput{
+	position: relative;
+	width: 100%;
+	border: solid green 1px;
+	height: 250px;
+	margin-top: 22px;
+	overflow-y: auto;
+
+	background: #000;
+	color: rgb(24, 172, 24);
+}
+
+
+#bottom-menu{
+	
+	/* position: absolute;  */
+	position: relative;
+	/* top: 55px; */
+	margin-top: 33px;
+	padding: 7px; 	
+	bottom: 22px; 
+	width: 100vw;
+}
+
+#bottom-menu a:hover{
+	color: white;
+}
+
+#bottom-menu a{
+	text-decoration: none;
+}
+
+
+#footer{
+
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background: rgb(6, 6, 54);
+	color: rgb(48, 112, 68);
+	padding: 7px;
+	font-size: 1.2em;
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	font-size: 1.2em;
+
+}
+
+</style>

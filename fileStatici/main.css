@@ -1,0 +1,32 @@
+body{
+	background: lightblue;
+}
+
+#mainBoxRedirectErr {
+
+	background: rgb(22, 22, 48);
+}
+
+#mainBoxRedirectErr p{
+
+	color: rgb(192, 192, 209);
+	padding: 7px;
+}
+
+#mainBoxRedirectErr  h2{
+color: rgb(71, 145, 119);
+padding: 2px;
+
+}
+
+#mainBoxRedirectErr  a{
+color: rgb(101, 121, 114);
+padding: 2px;
+
+}
+
+#mainBoxRedirectErr  a:hover{
+color: red;
+padding: 2px;
+
+}
