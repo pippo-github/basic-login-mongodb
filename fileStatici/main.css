@@ -11,6 +11,11 @@ logOnInvalid.ejs
 */
 
 
+*, body{
+	box-sizing: border-box;
+ }
+
+
 body{
 	padding: 0;
 	margin: 0;
@@ -49,6 +54,15 @@ padding: 2px;
 }
 
 
+
+
+/* login.html */
+
+
+
+
+
+/* login.html */
 
 
 
@@ -346,6 +360,131 @@ padding: 2px;
 /* logOnInvalid.ejs */
 
 
+*, body{
+	box-sizing: border-box;
+ }
+
+body{
+	padding: 0;
+	margin: 0;
+	background: rgb(185, 219, 185);
+	/* overflow: hidden; */
+}
+
+
+#loginHtml h1{
+	margin: 22px 7px;
+	background: rgb(185, 219, 185);
+	color: rgb(63, 29, 29);
+	
+}
+
+
+#fromLogInBoxPage  div
+{
+	margin: 22px 7px;
+}
+
+
+#fromLogInBoxPage  
+{
+
+	margin: 77px 7px;
+}
+
+
+	#fromLogInBoxPage{
+
+		width: 85%;
+		height: 350px;
+		border: solid mediumaquamarine 11px;
+		margin: 0 auto;
+		padding: 11px;
+
+	}
+
+#fromLogInBoxPage label{
+	margin-left: 7px;
+}
+
+		#fromLogInBoxPage  input[type=text], input[type=password]{
+			/* position: relative; */
+			display: block;
+			margin: 7px 0 0 0;
+
+		}
+
+		#fromLogInBoxPage  input[type=submit]
+		{
+			padding:0;
+			margin:0;
+			width: 100%;
+
+		}
+
+		#fromLogInBoxPage input[type=submit]:hover{
+			cursor: pointer;
+		}
+
+
+		#fromLogInBoxPage input{
+			display: block;
+			width: 100%;
+		}
+
+#titoloBasso div{
+	/* text-align: center;
+	width: 100vw;
+	position: absolute;
+	display: inline-block;
+	border: solid #ddd 1px;
+	font-size: 1.4em;
+	font-family: fantasy;
+	background: rgb(4, 4, 44);
+	color: rgb(48, 112, 68); */
+
+	position: absolute;
+	bottom: 0px;
+	width: 100vw;
+	background: rgb(6, 6, 54);
+	color: #ddd;
+	padding: 7px;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#titoloBasso{
+	position: absolute;
+	bottom: 0px;
+}
+
+#bottom-menu{
+	
+	position: absolute; 
+	padding: 7px; 	
+	bottom: 22px; 
+	width: 100vw;
+}
+
+#bottom-menu a:hover{
+	color: white;
+}
+
+#bottom-menu a{
+	text-decoration: none;
+}
+
+#footer{
+ 	position: relative;
+	bottom: 0px;
+	width: 100vw;
+	background: rgb(6, 6, 54);
+	color: #ddd;
+	padding: 7px;
+	font-size: 1.2em;
+	text-align: center;
+	padding-left: 21px;
+}
 
 
 
@@ -457,6 +596,7 @@ body h1{
 	padding: 7px;
 	font-size: 1.2em;
 	text-align: center;
+	
 }
 
 

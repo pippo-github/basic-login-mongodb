@@ -5,8 +5,10 @@ const mongo = require('mongodb').MongoClient
 
 let instanzaApp = express()
 
+
 // creare su heroku la variabile DB_CONNESSIONE coi dati di connessione
-// che mongodb altals fornisce
+// che mongodb altals fornisce: cluster ==> connect ==> dati conn appliacazione
+
 const string_connessione = process.env.DB_CONNESSIONE || "mongodb://localhost:27017";
 
 
