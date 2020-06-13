@@ -1,4 +1,4 @@
-<% if( datiSessione == '' || datiSessione == 'distrutta') {%>
+<% if( datiSessione == '' || datiSessione == 'distrutta' || datiSessione == undefined || datiSessione == null) {%>
 	<%- include('redirect.ejs')  %>
 <% } else { %>
 
@@ -22,7 +22,7 @@
 }
 
 #textWelcome{
-	background: linear-gradient(90deg, orange, rgb(216, 154, 39), blue);
+	background: linear-gradient(90deg, orange 15%, rgb(216, 154, 39) 40%,blue 70%);
 
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -39,12 +39,12 @@
 
 </style>
 
-<body>
+<body id='bodyPagHome'>
 
  
 
 
-	<h1>
+	<h1 id='titoloHomePage'>
 		Login effettuato
 	</h1>
 
@@ -80,53 +80,8 @@
 
 <style>
 
-*{
-	box-sizing: border-box;
+#bodyPagHome{
+	background: linear-gradient(180deg,rgba(95, 236, 95,.5), rgba(0, 128, 0,.5), rgba(0, 0, 255,.5), rgba(0, 0, 139,.5));
 }
-
-body{
-	padding: 0px;
-	margin: 0px;
-	overflow: hidden;
-}
-
-
-#msgHome{
-
- padding: 7px;
- background: rgba(24, 178, 224,.4);
- color: white;
- 
-
-}
-
-#mgsToUserName{
-	background: mediumaquamarine;
-	color: blue;
-	font-size: 1.8em;
-}
-
-/* #footerDiv{
-	position: absolute;
-	bottom: 0;
-	padding: 7px;
-	width: 100%;
-	border: solid green 1px;
-	color: rgb(207, 126, 19);
-	background: rgb(2, 2, 29);
-	text-align: center;
-} */
-
-#footerDiv{
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-	background: rgb(6, 6, 54);
-	color: #ddd;
-	padding: 7px;
-	font-size: 1.2em;
-	text-align: center;
-}
-
 
 </style>

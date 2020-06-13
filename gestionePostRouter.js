@@ -7,7 +7,9 @@ const codificaFun = require('./condificaPassword')
 
 let instanzaApp = express()
 
-const string_connessione = process.env.DB_CONNECT || "mongodb://localhost:27017";
+// creare su heroku la variabile DB_CONNESSIONE coi dati di connessione
+// che mongodb altals fornisce
+const string_connessione = process.env.DB_CONNESSIONE || "mongodb://localhost:27017";
 
 
 mio_router.use(express.urlencoded({ extended: true }))
