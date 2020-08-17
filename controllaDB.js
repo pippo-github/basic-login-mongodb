@@ -7,7 +7,7 @@ let instanzaApp = express()
 
 
 // creare su heroku la variabile DB_CONNESSIONE coi dati di connessione
-// che mongodb altals fornisce: cluster ==> connect ==> dati conn appliacazione
+// che mongodb altals fornisce: cluster ==> connect ==> dati conn applicazione
 
 const string_connessione = process.env.DB_CONNESSIONE || "mongodb://localhost:27017";
 
@@ -22,6 +22,8 @@ modulo_gestisci_db.post('/mostraDB', (richiesta, risposta) =>{
 	datiDb.find({})
 	.toArray()
 	.then(dati =>{
+		// la sintassi ES6 permette di scrivere direttamente 'dati'
+		// invece di { dati: dati }
 		risposta.render('controllaDB', { dati: dati })
 	})
 

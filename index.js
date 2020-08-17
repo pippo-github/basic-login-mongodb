@@ -1,3 +1,9 @@
+/* 
+
+ RICHIEDE NECESSARIAMENTE MONGODB LOCALE O REMOTO
+
+*/
+
 const express = require("express")
 const server = express()
 const path = require("path")
