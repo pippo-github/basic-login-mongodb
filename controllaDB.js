@@ -41,42 +41,38 @@ modulo_gestisci_db.post('/creaDB', (richiesta, risposta) =>{
 
 datiDb.remove({})
 
-		setTimeout(()=>{
-
-					datiDb.insert([
-									{ 
-										utente: "giuseppe",
-										passwd: "tarallo",
-									},
-									{ 
-										utente: "Dennis",
-										passwd: "Ritchie",
-									},
-									{ 
-										utente: "Kenneth",
-										passwd: "Thompson",
-									},
-									{ 
-										utente: "Anna",
-										passwd: "Ciob",
-									}
-								]
-
-					)
-
-		}, 500)
+setTimeout(()=>{
+	datiDb.insert([
+		{ 
+			utente: "giuseppe",
+			passwd: "tarallo",
+		},
+		{ 
+			utente: "Dennis",
+			passwd: "Ritchie",
+		},
+		{ 
+			utente: "Kenneth",
+			passwd: "Thompson",
+		},
+		{ 
+			utente: "Anna",
+			passwd: "Ciob",
+		}
+	])
+}, 500)
 
 
 
-		setTimeout(()=>{
-
-					datiDb.find({})
-					.toArray()
-					.then( dati =>{
-						risposta.render('controllaDB', { dati: dati })
-					})
-
-		}, 777)
+setTimeout(()=>{
+	
+	datiDb.find({})
+		.toArray()
+		.then( dati =>{
+			risposta.render('controllaDB', { dati: dati })
+		})
+	
+}, 777)
 
 
 	
