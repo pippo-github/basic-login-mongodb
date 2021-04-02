@@ -24,13 +24,9 @@ mio_router.post('/registraUtente', (richiesta, risposta) =>{
 
  dataBaseCollezione = instanzaApp.locals.collezioneDatiGlobali;
 
-
-
-
 	const nomeUtente   = richiesta.body.utente
 	const passwdUtente = richiesta.body.passwd
 	const bodyPassCod  = richiesta.body.codificaPwd
-
 
 	console.log("nome:     " + nomeUtente)
 	console.log("passwd:   " + passwdUtente)
@@ -39,31 +35,24 @@ mio_router.post('/registraUtente', (richiesta, risposta) =>{
     if(bodyPassCod == 'codeIt')
 	{
 		// dataBaseCollezione.insert({ utente: nomeUtente, passwd: codificaFun(passwdUtente) })	
-
 		// inserisce un untente solo se non esiste
 		dataBaseCollezione.update(
-									{utente: nomeUtente},
-									{$set:{utente: nomeUtente, passwd: codificaFun(passwdUtente)  }},
-									{ upsert: true}
-		)
+					   {utente: nomeUtente},
+					   {$set:{utente: nomeUtente, passwd: codificaFun(passwdUtente)  }},
+					   { upsert: true} )
 	}
      else
 	 {
 
-		 		// inserisce un untente solo se non esiste		 
-		 		dataBaseCollezione.update(
-									{utente: nomeUtente},
-									{$set:{utente: nomeUtente, passwd: passwdUtente  }},
-									{ upsert: true}
-				 )
+		// inserisce un untente solo se non esiste		 
+		dataBaseCollezione.update(
+					{utente: nomeUtente},
+					{$set:{utente: nomeUtente, passwd: passwdUtente  }},
+					{ upsert: true} )
 
-		//  dataBaseCollezione.insert({ utente: nomeUtente, passwd: passwdUtente })
 	 }
 	
-
 	risposta.redirect('/login')
-
-
 })
 
 mio_router.post('/postLogIn', (richiesta, risposta) =>{
@@ -76,17 +65,17 @@ mio_router.post('/postLogIn', (richiesta, risposta) =>{
 
 	// collezioneDati.find({ utente: bodyFromNome , passwd: bodyFromPass })
 	collezioneDati.find({$or: [ { utente: bodyFromNome , passwd: bodyFromPass }, 
-								{ utente: bodyFromNome , passwd: codificaFun(bodyFromPass) }  
-							  ] 
-						})
+				    { utente: bodyFromNome , passwd: codificaFun(bodyFromPass) }  
+				  ] 
+			    })
 	.toArray()
 	.then(dati =>{
 
 
 		if(Object.keys(dati).length)
 		{
-			datiSessione = richiesta.session         // prendo l'oggetto session e gli 
-			datiSessione.nome = bodyFromNome		 // aggiungo/creo la propietà 'nome' e la valorizzo
+			datiSessione = richiesta.session         	  // prendo l'oggetto session e gli 
+			datiSessione.nome = bodyFromNome		  // aggiungo/creo la propietà 'nome' e la valorizzo
 
 			console.log("utente valido")
 			console.log("IN POST, dati utente di sessione: " + datiSessione)
