@@ -2,7 +2,7 @@ const express = require('express')
 const mio_router = require('express').Router()
 const mongo = require('mongodb').MongoClient
 const path = require('path')
-const codificaFun = require('./condificaPassword')
+const codificaFun = require('./codificaPassword')
 
 
 let instanzaApp = express()
